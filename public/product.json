@@ -4,8 +4,8 @@
     "image": "../src/assets/images/balachow.png",
     "price": 550,
     "type": " ",
-    "discountPrice": 480,
-    "isDiscount": true,
+    "discountPrice": 0,
+    "isDiscount": false,
     "details": "Pure organic honey from local farms, packed with nutrients and antioxidants."
   },
   {
@@ -44,8 +44,8 @@
     "name": "Herbal Shampoo - 200ml",
     "image": "../src/assets/images/dryfish.png",
     "price": 300,
-    "discountPrice": 260,
-    "isDiscount": true,
+    "discountPrice": 0,
+    "isDiscount": false,
     "details": "Herbal shampoo with neem and aloe vera for healthy scalp and hair."
   },
   {
@@ -58,10 +58,10 @@
   },
   {
     "name": "Raw Turmeric Powder - 250g",
-    "image": "../src/assets/images/dryfish.png",
+    "image": "../src/assets/images/chui.png",
     "price": 150,
-    "discountPrice": 130,
-    "isDiscount": true,
+    "discountPrice": 0,
+    "isDiscount": false,
     "details": "Raw and sun-dried turmeric powder. Perfect for cooking and skincare."
   },
   {
@@ -74,10 +74,10 @@
   },
   {
     "name": "Neem Face Pack",
-    "image": "../src/assets/images/combobalachow.png",
+    "image": "../src/assets/images/smallchui.png",
     "price": 220,
-    "discountPrice": 199,
-    "isDiscount": true,
+    "discountPrice": 0,
+    "isDiscount": false,
     "details": "Detoxifying neem face pack for acne-prone and oily skin."
   }
 ]

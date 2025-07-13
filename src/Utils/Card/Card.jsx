@@ -20,7 +20,7 @@ const Card = ({ product }) => {
         </p>
         <div className="card-actions mt-5">
           <div
-            className="bg-[#67B96E] text-2xl text-white w-full pt-4 pb-4 rounded-md text-center shadow-md shadow-[#3d3f3e] uppercase 
+            className="bg-[#67B96E] text-xl text-white w-full pt-4 pb-4 rounded-md text-center shadow-md shadow-[#3d3f3e] uppercase 
     transition transform duration-200 active:scale-95 cursor-pointer"
           >
             ADD TO CART

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Force light mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
+/* Also set default for all modes */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* this is text css */
+.heebo-text {
+  font-family: "Heebo", sans-serif;
+}
+.hind-text {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+/*  this is for screen css */
+
+.custom-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}

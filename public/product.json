@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Organic Honey",
+    "image": "../src/assets/images/balachow.png",
+    "price": 550,
+    "type": " ",
+    "discountPrice": 480,
+    "isDiscount": true,
+    "details": "Pure organic honey from local farms, packed with nutrients and antioxidants."
+  },
+  {
+    "name": "Natural Handmade Soap",
+    "image": "../src/assets/images/chui.png",
+    "price": 200,
+    "discountPrice": 0,
+    "isDiscount": false,
+    "details": "Gentle on skin and free from harsh chemicals. Made with essential oils."
+  },
+  {
+    "name": "Cold-Pressed Coconut Oil",
+    "image": "https://example.com/images/coconut-oil.jpg",
+    "price": 350,
+    "discountPrice": 299,
+    "isDiscount": true,
+    "details": "100% pure cold-pressed coconut oil, ideal for cooking and skincare."
+  },
+  {
+    "name": "Brown Basmati Rice - 1kg",
+    "image": "../src/assets/images/combobalachow.png",
+    "price": 180,
+    "discountPrice": 150,
+    "isDiscount": true,
+    "details": "Whole grain basmati rice packed with fiber and nutrients."
+  },
+  {
+    "name": "Green Tea - 25 Bags",
+    "image": "../src/assets/images/combobalachow.png",
+    "price": 120,
+    "discountPrice": 0,
+    "isDiscount": false,
+    "details": "Natural detox green tea, perfect for boosting metabolism and wellness."
+  },
+  {
+    "name": "Herbal Shampoo - 200ml",
+    "image": "../src/assets/images/dryfish.png",
+    "price": 300,
+    "discountPrice": 260,
+    "isDiscount": true,
+    "details": "Herbal shampoo with neem and aloe vera for healthy scalp and hair."
+  },
+  {
+    "name": "Wooden Comb",
+    "image": "../src/assets/images/dryfish.png",
+    "price": 80,
+    "discountPrice": 0,
+    "isDiscount": false,
+    "details": "Eco-friendly wooden comb that prevents hair breakage and frizz."
+  },
+  {
+    "name": "Raw Turmeric Powder - 250g",
+    "image": "../src/assets/images/dryfish.png",
+    "price": 150,
+    "discountPrice": 130,
+    "isDiscount": true,
+    "details": "Raw and sun-dried turmeric powder. Perfect for cooking and skincare."
+  },
+  {
+    "name": "Reusable Cotton Bag",
+    "image": "../src/assets/images/combobalachow.png",
+    "price": 100,
+    "discountPrice": 0,
+    "isDiscount": false,
+    "details": "Eco-friendly shopping bag made with 100% organic cotton."
+  },
+  {
+    "name": "Neem Face Pack",
+    "image": "../src/assets/images/combobalachow.png",
+    "price": 220,
+    "discountPrice": 199,
+    "isDiscount": true,
+    "details": "Detoxifying neem face pack for acne-prone and oily skin."
+  }
+]

@@ -18,7 +18,7 @@
   },
   {
     "name": "Cold-Pressed Coconut Oil",
-    "image": "https://example.com/images/coconut-oil.jpg",
+    "image": "../src/assets/images/balachow.png",
     "price": 350,
     "discountPrice": 299,
     "isDiscount": true,

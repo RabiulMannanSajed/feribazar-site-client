@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Card from "../../../Utils/Card/Card";
 import HomeBanner from "../HomeBanner/HomeBanner";
 import Products from "../../Product/Products";
-
+import DiscountProduct from "../../DiscountProduct/DiscountProduct";
+import "./Homer.css";
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -23,6 +24,7 @@ const Home = () => {
     >
       <HomeBanner />
       <Products />
+      <DiscountProduct />
     </div>
   );
 };

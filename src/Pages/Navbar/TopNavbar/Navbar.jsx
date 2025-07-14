@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="bg-[#67B96E]">
       <div className="custom-container  flex justify-between items-center">
-        <h2 className=" pt-5 pb-5 font-medium text-[#2B425A] text-xl heebo-text">
+        <h2 className=" pt-5 pb-5 font-medium text-[#2B425A] text-md md:text-xl lg:text-2xl heebo-text">
           Purity is the first priority{" "}
         </h2>
         <div>

@@ -1,10 +1,17 @@
 const Card = ({ product }) => {
   const { name, image, price, discountPrice, isDiscount, details } = product;
-
+  const discountPercent = isDiscount
+    ? Math.round(((price - discountPrice) / price) * 100)
+    : 0;
   return (
     <div className="card bg-base-100  border-1 border-[#89d690] shadow-md shadow-[#3d3f3e]">
       <figure className="px-5 pt-5">
-        <img src={image} alt={name} className="rounded-xl h-[199px] " />
+        <img src={image} alt={name} className="rounded-xl h-[199px]  " />
+        {isDiscount && (
+          <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-md">
+            {discountPercent}% OFF
+          </div>
+        )}
       </figure>
       <div className="p-5 heebo-text">
         <div className="flex justify-between">

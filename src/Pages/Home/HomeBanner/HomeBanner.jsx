@@ -48,7 +48,7 @@ const HomeBanner = () => {
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-[500px] object-fill"
+              className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] object-fill"
             />
             <div className="absolute inset-0 flex text-white ">
               <div className="mt-[17%] ml-[7%]">

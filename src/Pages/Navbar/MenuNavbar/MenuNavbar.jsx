@@ -5,12 +5,13 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import logo from "../../../assets/feri_bazar-logo.png";
 import OrderProduct from "../../OrderProduct/OrderProduct";
 import { useCart } from "../../../Utils/Provider/CartProvider";
+import { NavLink } from "react-router-dom";
 
 const MenuNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { cartItems } = useCart();
-  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-
+  // const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const cartCount = cartItems.length;
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -46,13 +47,15 @@ const MenuNavbar = () => {
 
               {/* Center: Logo */}
               <div className="navbar-center">
-                <img
-                  src={logo}
-                  className={`transition-all duration-500 ${
-                    isScrolled ? "w-[70px]" : "w-[100px]"
-                  }`}
-                  alt="Logo"
-                />
+                <NavLink to="/">
+                  <img
+                    src={logo}
+                    className={`transition-all duration-500 ${
+                      isScrolled ? "w-[70px]" : "w-[100px]"
+                    }`}
+                    alt="Logo"
+                  />
+                </NavLink>
               </div>
 
               {/* Right: Search + Cart + Profile */}

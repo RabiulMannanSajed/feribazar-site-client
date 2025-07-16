@@ -14,7 +14,9 @@ const Footer = () => {
         {/* Company Info */}
         <div>
           <h1 className="text-2xl font-bold text-[#67B96E] mb-4">YourBrand</h1>
-          <p className="text-gray-400">Purity is the first priority</p>
+          <p className="text-[#67B96E] font-medium">
+            Purity is the first priority
+          </p>
         </div>
 
         {/* Navigation */}

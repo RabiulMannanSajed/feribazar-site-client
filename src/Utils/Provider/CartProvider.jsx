@@ -81,7 +81,10 @@ export const CartProvider = ({ children }) => {
     const filtered = cartItems.filter((item) => item._id !== id);
     setCartItems(filtered);
   };
-
+  const clearCart = () => {
+    setCartItems([]);
+    localStorage.removeItem("cartItems");
+  };
   return (
     <CartContext.Provider
       value={{
@@ -89,6 +92,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         updateQuantity,
         removeFromCart,
+        clearCart,
       }}
     >
       {children}

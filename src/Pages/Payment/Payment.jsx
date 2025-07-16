@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useCart } from "../../Utils/Provider/CartProvider";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 const Payment = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const { clearCart } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,21 +22,66 @@ const Payment = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const total = cartItems.reduce(
+  const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
 
-  const onSubmit = (data) => {
-    console.log("Order submitted:", {
+  const onSubmit = async (data) => {
+    const orderData = {
       ...data,
-      products: cartItems,
-      total,
-    });
-    // Optionally: send to backend API
+      totalPrice,
+      products: cartItems.map((item) => ({
+        productId: item._id,
+        quantity: item.quantity,
+      })),
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:5000/api/v1/feriBazar/clientOrder/create-clientOrder",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(orderData),
+        }
+      );
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // ✅ SweetAlert2 success message
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your order has been placed successfully!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+
+        // ✅ Reset form fields
+        reset();
+
+        // ✅ Remove cart from localStorage
+        localStorage.removeItem("cart");
+
+        clearCart();
+        // ✅ Navigate to home page
+        setTimeout(() => {
+          navigate("/");
+        }, 1600); // Delay to let Swal finish
+      } else {
+        console.error("Order failed:", result.message);
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+    }
   };
 
   if (cartItems.length === 0) {
@@ -126,7 +175,7 @@ const Payment = () => {
           ))}
         </div>
         <div className="text-xl font-bold text-right pt-4 border-t">
-          Total: {total} ৳
+          Total: {totalPrice} ৳
         </div>
       </div>
     </form>

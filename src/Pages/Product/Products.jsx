@@ -1,20 +1,14 @@
-import { useEffect, useState } from "react";
 import Card from "../../Utils/Card/Card";
+import useProduct from "../../hooks/useProduct";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const [products] = useProduct();
 
-  useEffect(() => {
-    fetch("/product.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
-
+  console.log(products);
   // Filter to get only undiscounted products
-  const undiscountedProducts = products.filter(
-    (product) => !product.isDiscount
+  const undiscountedProducts = products?.filter(
+    (product) => product.isDiscount === false
   );
-
   return (
     <div className="w-[90%] mx-auto pb-10">
       <h1 className="text-xl md:text-2xl lg:text-3xl uppercase font-bold text-center mt-10 mb-10 heebo-text">

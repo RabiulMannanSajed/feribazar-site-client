@@ -1,8 +1,14 @@
+import { useCart } from "../Provider/CartProvider";
+
 const Card = ({ product }) => {
-  const { name, image, price, discountPrice, isDiscount, details } = product;
+  const { name, image, price, discountPrice, isDiscount, _id } = product;
+
+  const { addToCart } = useCart();
+
   const discountPercent = isDiscount
     ? Math.round(((price - discountPrice) / price) * 100)
     : 0;
+
   return (
     <div className="card bg-base-100  border-1 border-[#89d690] shadow-md shadow-[#3d3f3e]">
       <figure className="px-5 pt-5">
@@ -27,6 +33,7 @@ const Card = ({ product }) => {
         </p>
         <div className="card-actions mt-5">
           <div
+            onClick={() => addToCart(product)}
             className="bg-[#67B96E] text-xl text-white w-full pt-4 pb-4 rounded-md text-center shadow-md shadow-[#3d3f3e] uppercase 
     transition transform duration-200 active:scale-95 cursor-pointer"
           >
